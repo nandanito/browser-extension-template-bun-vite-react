@@ -1,6 +1,7 @@
 # Browser Extension Template with Bun, Vite and TypeScript
 
-![GitHub license](https://img.shields.io/github/license/himalaya0035/chrome-extension-boilerplate-react-vite-typescript)
+![GitHub license](https://img.shields.io/github/license/nandanito/browser-extension-template-bun-vite-react)
+![Bun](https://img.shields.io/badge/bun-1.x-blue)
 ![React](https://img.shields.io/badge/react-18.x-blue)
 ![TypeScript](https://img.shields.io/badge/typescript-5.x-blue)
 ![Tailwind CSS](https://img.shields.io/badge/tailwindcss-3.x-blue)
