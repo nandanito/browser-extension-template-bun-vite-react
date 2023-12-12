@@ -18,7 +18,7 @@ The project is based upon [chrome-extension-boilerplate-react-vite-typescript](h
 - 🚀 Speedy development using [Bun](https://bun.sh/) integrated toolkit and Vite's fast HMR
 - 🛠️ Automated extension manifest file generation using [CRXJS Vite-Plugin](https://crxjs.dev/vite-plugin)
 - ⚛️ React-powered user interface along with [Tailwind](https://tailwindcss.com/) for quick & easy styling
-- 🗃️ Out of the box support for Popup, Options, Background Script, ConctentScript, DevTools, NewTab and SidePanel (use @crxjs/vite-plugin@2.x-beta)
+- 🗃️ Out of the box support for Popup, Options, Background Script, ConctentScript, DevTools, NewTab and SidePanel (use @crxjs/vite-plugin 2.x-beta)
 
 ## Prerequisites
 
