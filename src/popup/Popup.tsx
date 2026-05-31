@@ -14,7 +14,7 @@ export const Popup = () => {
 
   useEffect(() => {
     chrome.storage.sync.get(['count'], (result) => {
-      setCount(result.count || 0);
+      setCount((result.count as number) || 0);
     });
   }, []);
 

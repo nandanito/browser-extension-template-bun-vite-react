@@ -2,12 +2,11 @@
 
 ![GitHub license](https://img.shields.io/github/license/nandanito/browser-extension-template-bun-vite-react)
 ![Bun](https://img.shields.io/badge/bun-1.x-blue)
-![React](https://img.shields.io/badge/react-18.x-blue)
-![TypeScript](https://img.shields.io/badge/typescript-5.x-blue)
-![Tailwind CSS](https://img.shields.io/badge/tailwindcss-3.x-blue)
-![Vite](https://img.shields.io/badge/vite-5.x-blue)
+![React](https://img.shields.io/badge/react-19.x-blue)
+![TypeScript](https://img.shields.io/badge/typescript-6.x-blue)
+![Vite](https://img.shields.io/badge/vite-8.x-blue)
 
-This template serves as the boilerplate code to develop browser extension using [Bun](https://bun.sh/) & [Vite](https://vitejs.dev/) for modular tooling for Typescript development, [React](https://react.dev/) for the user interface and [Tailwind](https://tailwindcss.com/) for flexible styling.
+This template serves as the boilerplate code to develop browser extension using [Bun](https://bun.sh/) & [Vite](https://vitejs.dev/) for modular tooling for Typescript development and [React](https://react.dev/) for the user interface.
 
 The main aim is to offer the simple template to get started with the browser extension using Bun, an all-in-one JavaScript runtime & toolkit.
 
@@ -17,7 +16,7 @@ The project is based upon [chrome-extension-boilerplate-react-vite-typescript](h
 
 - 🚀 Speedy development using [Bun](https://bun.sh/) integrated toolkit and Vite's fast HMR
 - 🛠️ Automated extension manifest file generation using [CRXJS Vite-Plugin](https://crxjs.dev/vite-plugin)
-- ⚛️ React-powered user interface along with [Tailwind](https://tailwindcss.com/) for quick & easy styling
+- ⚛️ React-powered user interface for each extension surface
 - 🗃️ Out of the box support for Popup, Options, Background Script, ConctentScript, DevTools, NewTab and SidePanel (use @crxjs/vite-plugin 2.x-beta)
 
 ## Prerequisites
