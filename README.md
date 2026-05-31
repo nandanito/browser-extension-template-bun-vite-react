@@ -57,7 +57,7 @@ git clone https://github.com/nandanito/browser-extension-template-bun-vite-react
 cd browser-extension-template-bun-vite-react
 ```
 
-3. Chane `name` anbd `description` in the `package.json` file
+3. Change `name`, `displayName` and `description` in the `package.json` file (the extension's visible name comes from `displayName`)
 
 4. Install dependencies:
 
@@ -110,7 +110,7 @@ The `dist` folder will be created, which can be packaged to distribute the exten
 
 ## Contributing
 
-Any sort of contributions are welcome! If you encounter any issues or have ideas for improvements, feel free to open an issue or submit a pull request.
+Any sort of contributions are welcome! If you encounter any issues or have ideas for improvements, feel free to open an issue or submit a pull request. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the development workflow and PR checklist.
 
 ## License
 
