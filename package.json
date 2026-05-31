@@ -3,7 +3,7 @@
   "displayName": "Browser Extension Template (Bun + Vite + React + TS)",
   "description": "A template for browser extension with Bun, Vite and React.",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "license": "MIT",
   "keywords": [
