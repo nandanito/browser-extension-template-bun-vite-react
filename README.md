@@ -6,6 +6,8 @@
 ![TypeScript](https://img.shields.io/badge/typescript-6.x-blue)
 ![Vite](https://img.shields.io/badge/vite-8.x-blue)
 
+> **🆕 Recently modernized ([v0.1.0](https://github.com/nandanito/browser-extension-template-bun-vite-react/releases/tag/v0.1.0)):** now on Vite 8, React 19, TypeScript 6, ESLint 10 (flat config), and `@crxjs/vite-plugin` 2.x stable. `bun install` && `bun run dev` works out of the box.
+
 This template serves as the boilerplate code to develop browser extension using [Bun](https://bun.sh/) & [Vite](https://vitejs.dev/) for modular tooling for Typescript development and [React](https://react.dev/) for the user interface.
 
 The main aim is to offer the simple template to get started with the browser extension using Bun, an all-in-one JavaScript runtime & toolkit.
@@ -17,7 +19,22 @@ The project is based upon [chrome-extension-boilerplate-react-vite-typescript](h
 - 🚀 Speedy development using [Bun](https://bun.sh/) integrated toolkit and Vite's fast HMR
 - 🛠️ Automated extension manifest file generation using [CRXJS Vite-Plugin](https://crxjs.dev/vite-plugin)
 - ⚛️ React-powered user interface for each extension surface
-- 🗃️ Out of the box support for Popup, Options, Background Script, ConctentScript, DevTools, NewTab and SidePanel (use @crxjs/vite-plugin 2.x-beta)
+- 🗃️ Out of the box support for Popup, Options, Background Script, Content Script, DevTools, NewTab and SidePanel (via @crxjs/vite-plugin 2.x)
+
+## Screenshots
+
+The template ships with working example UI for each extension surface:
+
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Popup</strong><br/><img src="docs/screenshots/popup.png" alt="Popup page" /></td>
+    <td align="center" width="50%"><strong>Options</strong><br/><img src="docs/screenshots/options.png" alt="Options page" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Side Panel</strong><br/><img src="docs/screenshots/sidepanel.png" alt="Side panel page" /></td>
+    <td align="center"><strong>New Tab</strong><br/><img src="docs/screenshots/newtab.png" alt="New tab page" /></td>
+  </tr>
+</table>
 
 ## Prerequisites
 
@@ -63,7 +80,21 @@ bun run dev
   - Find and Click `Load unpacked extension`
   - Select the `dist` folder in the project directory
 
-- for Firefox: WIP
+- for Firefox:
+
+  - Run `bun run build` to generate the `dist` folder
+  - Open in the browser: `about:debugging#/runtime/this-firefox`
+  - Click `Load Temporary Add-on…`
+  - Select the `dist/manifest.json` file (Firefox loads the manifest file, not the folder)
+  - Note: temporary add-ons are removed when Firefox restarts
+
+  **Firefox compatibility caveats** — this template's manifest targets Chromium (MV3) and a few keys behave differently in Firefox:
+
+  - **Side Panel** — `side_panel` is Chromium-only; Firefox uses [`sidebar_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) instead, so the side panel surface won't load as-is.
+  - **Background** — Firefox MV3 prefers an event page (`background.scripts`) over `background.service_worker`; the worker may be ignored.
+  - Popup, Options, DevTools, New Tab and content scripts work across both browsers.
+
+  Adjust `src/manifest.ts` for the surfaces you need on Firefox. See the [`@crxjs` browser support notes](https://crxjs.dev/vite-plugin) for details.
 
 7. Start with the development by editing/customizing the `index.tsx` files in the respective directories for background, contentscript, options, popup, etc.
 
